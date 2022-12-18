@@ -1,0 +1,84 @@
+openapi: 3.0.1
+info:
+  title: STD21020 FootBall match
+  description: 'API specification for a football match display'
+  version: 1.0.0
+servers:
+  - url: https://localhost:8080.com
+tags:
+  - name: Team
+  - name: Match
+
+paths:
+  /teams:
+    get:
+      tags:
+        - "Team"
+      description: get list of team with players
+      responses:
+        200:
+          description: list of team with players
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TeamResponse'
+  /matchs:
+    get:
+      tags:
+        - "Match"
+      description: get list of all matchs
+      responses:
+        200:
+          description: list of all matchs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MatchResponse'
+
+components:
+  schemas:
+    PlayerResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+    SponsorResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+    TeamResponse:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Madagascar
+        players:
+          type: array
+          $ref: '#/components/schemas/PlayerResponse'
+        sponsors:
+          type: array
+          $ref: '#/components/schemas/SponsorResponse'
+    MatchResponse:
+      type: object
+      properties:
+        team_a:
+          type: string
+          example: "France"
+        team_b:
+          type: string
+          example: "Argentine"
+        date:
+          type: string
+          format: date
+        time:
+          type: string
+          format: time
