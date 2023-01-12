@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,4 +18,8 @@ public class MatchResponse {
     private String team_b;
     private LocalDate date;
     private LocalTime time;
+
+    private int score_a;
+    private int score_b;
+    private List<GoalResponse> goals;
 }

@@ -1,5 +1,6 @@
 package prog3td2.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -7,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Builder
@@ -29,4 +31,18 @@ public class MatchEntity {
     @Column(name = "datetime")
     private LocalDateTime date_time;
     private String stadium;
+
+    @Transient
+    private int score_a;
+
+    @Transient
+    private int score_b;
+    //<>
+    @OneToMany(mappedBy = "match")
+    @JsonIgnore
+    private List<GoalEntity> goals;
 }
+
+
+
+

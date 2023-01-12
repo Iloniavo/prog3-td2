@@ -16,8 +16,8 @@ public class MatchController {
     private final MatchService service;
     private final MatchRestMapper mapper;
 
-    @GetMapping("/matchs")
-    public List<MatchResponse> getMatchs(){
+    @GetMapping("/matches")
+    public List<MatchResponse> getMatches(){
         return service.getMatchs().stream().map(mapper::toRest).toList();
     }
 }
