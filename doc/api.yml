@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: STD21020 FootBall match
-  description: 'API specification for a football match display'
+  title: STD21020 Football API
+  description: 'API specification for poll project'
   version: 1.0.0
 servers:
   - url: https://localhost:8080.com
@@ -39,6 +39,28 @@ paths:
                 items:
                   $ref: '#/components/schemas/MatchResponse'
 
+  /matchs/{idMatch}:
+    get:
+      tags:
+        - "Match"
+      description: get scores details by match id
+      parameters:
+        - name: idMatch
+          in: path
+          description: id of the match for which you want to see the score
+          required: true
+          schema:
+            type: number
+      responses:
+        200:
+          description: list of match scores with details
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MatchResponse'
+
 components:
   schemas:
     PlayerResponse:
@@ -46,15 +68,25 @@ components:
       properties:
         id:
           type: integer
+          example: 1
         name:
           type: string
+          example: Voavy
+        team:
+          type: string
+          example: Madagascar
+        is_keeper:
+          type: boolean
+          example: false
     SponsorResponse:
       type: object
       properties:
         id:
           type: integer
+          example: 1
         name:
           type: string
+          example: Telma
     TeamResponse:
       type: object
       properties:
@@ -70,15 +102,44 @@ components:
     MatchResponse:
       type: object
       properties:
-        team_a:
-          type: string
-          example: "France"
-        team_b:
-          type: string
-          example: "Argentine"
         date:
           type: string
           format: date
         time:
           type: string
           format: time
+          example: 14:15
+        team_a:
+          type: string
+          example: "Madagascar"
+        team_b:
+          type: string
+          example: "Niger"
+        score_a:
+          type: number
+          example: 1
+        score_b:
+          type: number
+          example: 0
+        goals_a:
+          type: array
+          items:
+            allOf:
+              - $ref: '#/components/schemas/Goal'
+          goals_b:
+            type: array
+            items:
+              allOf:
+                - $ref: '#/components/schemas/Goal'
+    Goal:
+      type: object
+      properties:
+        time:
+          type: number
+          example: 90
+        player:
+          type: string
+          example: "Voavy"
+        is_own_goal:
+          type: boolean
+          example: false

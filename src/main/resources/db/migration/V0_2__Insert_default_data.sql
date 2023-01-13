@@ -19,12 +19,11 @@ insert into team (name) values ('Shihuajian');
 insert into team (name) values ('Mölndal');
 insert into team (name) values ('Dębno');
 
-insert into game (id_team_a, id_team_b, datetime, stadium) values (18, 18, '2022-06-01 18:09:24', 'Duba-Yurt');
-insert into game (id_team_a, id_team_b, datetime, stadium) values (6, 17, '2022-02-05 11:33:20', 'Maipú');
-insert into game (id_team_a, id_team_b, datetime, stadium) values (7, 19, '2022-06-26 21:48:31', 'Bondokodi');
-insert into game (id_team_a, id_team_b, datetime, stadium) values (9, 10, '2022-04-02 02:27:02', 'Arenal');
-insert into game (id_team_a, id_team_b, datetime, stadium) values (17, 16, '2022-03-03 14:47:12', 'Guaíba');
-insert into game (id_team_a, id_team_b, datetime, stadium) values (16, 18, '2022-02-22 01:35:16', 'Veselí nad Lužnicí');
+insert into game (id_team_a, id_team_b, datetime, stadium) values (1, 2, '2022-02-05 11:33:20', 'Maipú');
+insert into game (id_team_a, id_team_b, datetime, stadium) values (1, 3, '2022-06-26 21:48:31', 'Bondokodi');
+insert into game (id_team_a, id_team_b, datetime, stadium) values (2, 4, '2022-04-02 02:27:02', 'Arenal');
+insert into game (id_team_a, id_team_b, datetime, stadium) values (2, 3, '2022-03-03 14:47:12', 'Guaíba');
+insert into game (id_team_a, id_team_b, datetime, stadium) values (1, 4, '2022-02-22 01:35:16', 'Veselí nad Lužnicí');
 insert into game (id_team_a, id_team_b, datetime, stadium) values (14, 9, '2022-05-05 01:53:58', 'Cibolang');
 insert into game (id_team_a, id_team_b, datetime, stadium) values (16, 14, '2022-05-02 18:16:13', 'Solotcha');
 insert into game (id_team_a, id_team_b, datetime, stadium) values (8, 14, '2022-02-05 02:27:52', 'Solnechnogorsk');
@@ -50,26 +49,35 @@ insert into game (id_team_a, id_team_b, datetime, stadium) values (17, 17, '2022
 insert into game (id_team_a, id_team_b, datetime, stadium) values (20, 15, '2022-02-19 16:36:57', 'Lũng Hồ');
 insert into game (id_team_a, id_team_b, datetime, stadium) values (2, 16, '2022-01-06 17:14:16', 'Cereté');
 
+insert into game (id_team_a, id_team_b, datetime, stadium) values (21, 22, '2022-01-06 00:00:00', 'Bernabeau');
+insert into player (name, number, id_team) values ('Ronaldo', 7, 21);
+insert into player (name, number, id_team) values ('Benzema', 9, 21);
+
+
+insert into player (name, number, id_team) values ('Messi', 10, 22);
+insert into player (name, number, id_team) values ('Dembele', 11, 22);
+
+
 insert into player (name, number, id_team) values ('Myra Vittori', 61, 1);
-insert into player (name, number, id_team) values ('Deeyn Cecchi', 13, 6);
-insert into player (name, number, id_team) values ('Way Winspire', 10, 5);
-insert into player (name, number, id_team) values ('Donovan Trittam', 28, 18);
-insert into player (name, number, id_team) values ('Horacio Faulder', 55, 20);
-insert into player (name, number, id_team) values ('Davida Ostler', 49, 6);
-insert into player (name, number, id_team) values ('Lois Hudless', 48, 19);
-insert into player (name, number, id_team) values ('Pegeen Harrod', 93, 5);
-insert into player (name, number, id_team) values ('Pamela Vispo', 46, 12);
-insert into player (name, number, id_team) values ('Evelyn Budnk', 86, 1);
-insert into player (name, number, id_team) values ('Eula O''Hear', 44, 18);
-insert into player (name, number, id_team) values ('Fitz Beswick', 14, 1);
-insert into player (name, number, id_team) values ('Alvan Callum', 27, 16);
-insert into player (name, number, id_team) values ('Wenda Feronet', 26, 12);
-insert into player (name, number, id_team) values ('Colman Jeratt', 47, 5);
-insert into player (name, number, id_team) values ('Cynthia Radolf', 44, 10);
-insert into player (name, number, id_team) values ('Jasmine Demke', 93, 18);
-insert into player (name, number, id_team) values ('Bidget Coghill', 40, 6);
-insert into player (name, number, id_team) values ('Zane Orrocks', 4, 15);
-insert into player (name, number, id_team) values ('Mona Binnes', 21, 5);
+insert into player (name, number, id_team) values ('Deeyn Cecchi', 13, 1);
+insert into player (name, number, id_team) values ('Way Winspire', 10, 1);
+insert into player (name, number, id_team) values ('Donovan Trittam', 28, 1);
+insert into player (name, number, id_team) values ('Horacio Faulder', 55, 1);
+insert into player (name, number, id_team) values ('Davida Ostler', 49, 2);
+insert into player (name, number, id_team) values ('Lois Hudless', 48, 2);
+insert into player (name, number, id_team) values ('Pegeen Harrod', 93, 2);
+insert into player (name, number, id_team) values ('Pamela Vispo', 46, 2);
+insert into player (name, number, id_team) values ('Evelyn Budnk', 86, 2);
+insert into player (name, number, id_team) values ('Eula O''Hear', 44, 3);
+insert into player (name, number, id_team) values ('Fitz Beswick', 14, 3);
+insert into player (name, number, id_team) values ('Alvan Callum', 27, 3);
+insert into player (name, number, id_team) values ('Wenda Feronet', 26, 3);
+insert into player (name, number, id_team) values ('Colman Jeratt', 47, 3);
+insert into player (name, number, id_team) values ('Cynthia Radolf', 44, 4);
+insert into player (name, number, id_team) values ('Jasmine Demke', 93, 4);
+insert into player (name, number, id_team) values ('Bidget Coghill', 40, 4);
+insert into player (name, number, id_team) values ('Zane Orrocks', 4, 4);
+insert into player (name, number, id_team) values ('Mona Binnes', 21, 4);
 insert into player (name, number, id_team) values ('Bay Fehely', 12, 11);
 insert into player (name, number, id_team) values ('Amory Coggan', 90, 18);
 insert into player (name, number, id_team) values ('Kippy Ghiriardelli', 33, 13);

@@ -14,12 +14,12 @@ import java.util.List;
 @Builder
 @Data
 public class MatchResponse {
-    private String team_a;
-    private String team_b;
+    private int id;
+    private TeamGoalResponse team_a;
+    private TeamGoalResponse team_b;
     private LocalDate date;
     private LocalTime time;
 
     private int score_a;
     private int score_b;
-    private List<GoalResponse> goals;
 }

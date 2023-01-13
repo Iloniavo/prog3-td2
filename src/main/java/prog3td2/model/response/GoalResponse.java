@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 public class GoalResponse {
-    private int time;
-    private String scorer;
+    private int minutes;
+    private PlayerResponse player;
     private boolean isOwnGoal;
 }
